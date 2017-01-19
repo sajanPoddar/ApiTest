@@ -10,7 +10,8 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+$api = app('Dingo\Api\Routing\Router');
 Route::get('/', function () {
     return view('welcome');
 });
+
