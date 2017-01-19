@@ -181,6 +181,9 @@ return [
         //Dingo Laravel service provider....
         Dingo\Api\Provider\LaravelServiceProvider::class,
 
+        //entrust service provider...
+        Zizaco\Entrust\EntrustServiceProvider::class,   
+
     ],
 
     /*
@@ -228,6 +231,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
 
     ],
 

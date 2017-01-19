@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
@@ -9,6 +9,6 @@ class homeController extends Controller
     //
     public function index()
     {
-    	return 'hello';
+    	return User::all();
     }
 }
