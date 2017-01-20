@@ -14,4 +14,5 @@ $api = app('Dingo\Api\Routing\Router');
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('user/{user_id}/roles/{role_name}', 'homeController@attachUserRole');
 

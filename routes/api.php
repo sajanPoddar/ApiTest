@@ -22,3 +22,4 @@ Route::get('hello','homeController@index');
 // 		return "hello";
 // 	});
 // });
+Route::get('user/{user_id}/roles/{role_name}', 'homeController@attachUserRole');
