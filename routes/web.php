@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 Route::get('user/{user_id}/roles/{role_name}', 'homeController@attachUserRole');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
