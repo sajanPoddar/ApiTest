@@ -22,4 +22,7 @@ Route::get('hello','homeController@index');
 // 		return "hello";
 // 	});
 // });
-Route::get('user/{user_id}/roles/{role_name}', 'homeController@attachUserRole');
+Route::get('users/{user_id}/roles/{role_name}', 'homeController@attachUserRole');
+Route::get('users/{user_id}/roles','homeController@getUserRole');
+Route::post('role/permission/add', 'homeController@attachPermission');
+Route::get('role/{user_name}/permissions', 'homeController@getPermissions');

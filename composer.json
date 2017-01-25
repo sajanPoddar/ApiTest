@@ -17,7 +17,8 @@
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*",
         "laracasts/generators": "^1.1",
-        "zizaco/entrust": "5.2.x-dev"
+        "zizaco/entrust": "5.2.x-dev",
+        "tymon/jwl-auth": "0.5.*"
     },
     "autoload": {
         "classmap": [
