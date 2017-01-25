@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Facades\JWTAuth;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -45,6 +48,22 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+        try{
+            if(! $token = JWTAuth::attempt($credentials))
+            {
+                return $this->response->error(['error' => 'user credentials is not correct'], 401);
+            }
+        }
+        catch(JWTException $ex){
+            return $this->response->error(['error' => 'something went wrong!', 500]);
+        }
+        return $this->response->array(compact('token'))->setStatusCode(200);
+    }
+
     protected function validator(array $data)
     {
         return Validator::make($data, [

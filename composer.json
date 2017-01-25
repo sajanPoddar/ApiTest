@@ -8,7 +8,8 @@
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
         "dingo/api": "1.0.x@dev",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "tymon/jwt-auth": "0.5.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -17,8 +18,7 @@
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*",
         "laracasts/generators": "^1.1",
-        "zizaco/entrust": "5.2.x-dev",
-        "tymon/jwl-auth": "0.5.*"
+        "zizaco/entrust": "5.2.x-dev"
     },
     "autoload": {
         "classmap": [
